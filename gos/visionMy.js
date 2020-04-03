@@ -2,6 +2,7 @@
 // const cheerio = require('cheerio')
 const fs = require('fs')
 const getUrl = require('./superagent.js')
+var os = require("os");
 const url = 'http://gogs.visionacademy.cn'
 let urlAll = []
 let urlGit = []
@@ -42,10 +43,9 @@ async function gitUrl() {
     const $ = await getUrl(urlAll[index])
     const nameCla = $('a.name')
     nameCla.each((item, indexs) => {
-      fs.writeFile('./write.txt', `${url}${$(indexs).attr('href')}.git`, (err) => {
-        if (err) throw err;
+      fs.appendFile('./write.txt', `${url}${$(indexs).attr('href')}.git`+ os.EOL, 'utf8', (err) => {
+        if (err) throw err; 
       })
-      // urlGit.push(url + $(indexs).attr('href') + '.git')
     })
   }
   console.log(urlGit)
