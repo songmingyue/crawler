@@ -1,10 +1,6 @@
 const axio = require('./axiox.js')
 const superagent = require('superagent')
-const axios = require('axios')
 const fs = require('fs')
-const path = require('path')
-const chapterUrl = []
-const aaa = ''
 getUrl()
 async function getUrl() {
   const url = 'https://www.zhuaji.org/read/548/'
