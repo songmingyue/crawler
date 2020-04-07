@@ -9,9 +9,15 @@ npm install
 
 ### gos
 ```
-爬单个网页的
+爬单个网页的(内网)
 ```
 ### exports
 ```
-exports 练习
+exports 练习如何输出
+```
+
+### readBook
+
+```
+爬《三生三世十里桃花》每一个txt对应议一章小说
 ```
