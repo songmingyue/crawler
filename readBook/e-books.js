@@ -16,5 +16,5 @@ async function getUrl() {
       }
     })
   }
-  console.log('结束进程')
+  console.log(hrefUrl)
 }
